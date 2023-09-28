@@ -48,7 +48,7 @@ function OutputHDF(
     fname, grid::GridT, field; zu, z, dzhdf, func=identity, zvars=nothing,
 )
     (; tu, tmin, tmax, Nt, t) = grid
-    (; Eu, Iu) = field
+    (; Eu, Iu, E) = field
 
     if !isdir(dirname(fname))
         mkpath(dirname(fname))
